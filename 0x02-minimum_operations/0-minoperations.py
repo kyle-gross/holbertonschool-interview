@@ -7,12 +7,17 @@ def minOperations(n):
     achieve `n` number of characters in a text file. Starting from 1 character
 
     Returns:
-        min_op (int): minimum operations required to copy and paste to achieve
+        ops (int): minimum operations required to copy and paste to achieve
         `n` operations.
             * if `n` is impossible to achieve, returns 0
     """
-    for i in range(n):
-        i += i
-        if i == n:
-            return i
-    return 0
+    ops = 0
+    i = 2
+
+    while (i <= n):
+        while (n % i == 0):
+            ops += i
+            n = n / i
+        i += 1
+
+    return ops
