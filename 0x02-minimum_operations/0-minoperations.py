@@ -15,9 +15,13 @@ def minOperations(n):
     i = 2
 
     while (i <= n):
+        # See if problem can be broken into smaller problems
         while (n % i == 0):
+            # If yes then add no of smaller problems to result
             ops += i
+            # Create smaller problem
             n = n / i
+        # Iterator
         i += 1
 
     return ops
