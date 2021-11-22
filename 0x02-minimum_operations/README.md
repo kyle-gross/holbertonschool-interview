@@ -5,6 +5,7 @@ In a text file, there is a single character `H`. Your text editor can execute on
 
 Example:
 `n = 9`
+
 `H` => `Copy All` => `Paste`=> `HH` => `Paste` => `HHH` => `Copy All` => `Paste` => `HHHHHH` => Paste => `HHHHHHHHH`
 
 Number of operations: `6`
