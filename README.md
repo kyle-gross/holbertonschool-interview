@@ -2,7 +2,7 @@
 
 This directory holds all of the interview prep questions provided by Holberton.
 
-## Directories
+## Sub-Directories
 
 ### [0x00-lockboxes](https://github.com/kyle-gross/holbertonschool-interview/tree/main/0x00-lockboxes "0x00-lockboxes")
 
