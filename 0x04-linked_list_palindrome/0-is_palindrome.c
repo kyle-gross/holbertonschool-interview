@@ -13,6 +13,9 @@ int is_palindrome(listint_t **head)
 	size_t len = list_len(*head);
 	int half = (len / 2);
 
+	if (!*head || len == 1)
+		return (1);
+
 	while (half > 0)
 	{
 		add_nodeint_end(&temp, current->n);
