@@ -13,20 +13,25 @@ int is_palindrome(listint_t **head)
 	size_t len = list_len(*head);
 	int half = (len / 2);
 
+	/* If list is NULL or of length 1, it's a palindrome */
 	if (!*head || len == 1)
 		return (1);
 
+	/* Move current ptr to halfway through the list */
 	while (half > 0)
 	{
 		current = current->next;
 		half--;
 	}
 
+	/* If length is odd, skip middle element */
 	if (len % 2 != 0)
 		current = current->next;
 
+	/* Reverse second half of list */
 	temp = rev_list(&current);
 
+	/* Loop through second half of list and compare to beginning of list */
 	while (temp)
 	{
 		if (temp->n != (*head)->n)
