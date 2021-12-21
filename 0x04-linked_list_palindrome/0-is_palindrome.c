@@ -18,24 +18,22 @@ int is_palindrome(listint_t **head)
 
 	while (half > 0)
 	{
-		add_nodeint_end(&temp, current->n);
 		current = current->next;
 		half--;
 	}
 
-	temp = rev_list(&temp);
-
 	if (len % 2 != 0)
 		current = current->next;
 
-	while (current)
+	temp = rev_list(&current);
+
+	while (temp)
 	{
-		if (temp->n != current->n)
+		if (temp->n != (*head)->n)
 			return (0);
 		temp = temp->next;
-		current = current->next;
+		(*head) = (*head)->next;
 	}
-	free_listint(temp);
 
 	return (1);
 }
