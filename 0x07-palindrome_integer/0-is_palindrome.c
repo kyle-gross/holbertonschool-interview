@@ -35,6 +35,11 @@ int is_palindrome(unsigned long n)
 	return (1);
 }
 
+/**
+ * rev_string - reverses a string
+ * @s: the string to reverse
+ * Return: void
+ */
 void rev_string(char *s)
 {
 	int c, i, len = strlen(s);
@@ -47,14 +52,20 @@ void rev_string(char *s)
 		s[c] = tmp;
 	}
 }
- 
-// Implementation of itoa()
+
+
+/**
+ * itoa - converts integer to string
+ * @num: number to convert
+ * @str: buffer of string
+ * @base: decimal place to convert to
+ * Return: converted string
+ */
 char* itoa(int num, char* str, int base)
 {
     int i = 0;
     bool isNegative = false;
  
-    /* Handle 0 explicitly, otherwise empty string is printed for 0 */
     if (num == 0)
     {
         str[i++] = '0';
@@ -62,15 +73,12 @@ char* itoa(int num, char* str, int base)
         return str;
     }
  
-    // In standard itoa(), negative numbers are handled only with
-    // base 10. Otherwise numbers are considered unsigned.
     if (num < 0 && base == 10)
     {
         isNegative = true;
         num = -num;
     }
  
-    // Process individual digits
     while (num != 0)
     {
         int rem = num % base;
@@ -78,14 +86,12 @@ char* itoa(int num, char* str, int base)
         num = num/base;
     }
  
-    // If number is negative, append '-'
     if (isNegative)
         str[i++] = '-';
  
-    str[i] = '\0'; // Append string terminator
+    str[i] = '\0';
  
-    // Reverse the string
     rev_string(str);
  
-    return str;
+    return (str);
 }
