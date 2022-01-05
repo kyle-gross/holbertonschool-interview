@@ -15,7 +15,7 @@ int is_palindrome(unsigned long n)
 		new_n = (10 * new_n) + x;
 		n /= 10;
 	}
-	new_n = (10 * new_n) + x;
+	new_n = (10 * new_n) + n;
 
 	if (original != new_n)
 		return (0);
