@@ -20,10 +20,12 @@ int is_palindrome(unsigned long n)
 	i = j;
 
 	if (len % 2 != 0)
-		{
-			j++;
-			i--;
-		}
+	{
+		j++;
+		i--;
+	}
+	else
+		i = j - 1;
 
 	for (; i >= 0; i--)
 	{
