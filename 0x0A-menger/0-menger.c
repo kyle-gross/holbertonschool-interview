@@ -10,11 +10,15 @@ void menger(int level) {
 
 	if (level == 0)
 		printf("#\n");
-	if (level > 0) {
-		for (x = 0; x < size; x++) {
-			for (y = 0; y < size; y++) {
+	if (level > 0)
+	{
+		for (x = 0; x < size; x++)
+		{
+			for (y = 0; y < size; y++)
+			{
 				print = 1;
-				for (i = 1; i < size; i *= 3) {
+				for (i = 1; i < size; i *= 3)
+				{
 					if (((x / i) % 3 == 1) && ((y / i) % 3 == 1) && print)
 						print = 0;
 				}
