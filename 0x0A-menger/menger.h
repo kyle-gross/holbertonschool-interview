@@ -6,6 +6,5 @@
 #include <stdlib.h>
 
 void menger(int level);
-void drawSponge();
 
 #endif
