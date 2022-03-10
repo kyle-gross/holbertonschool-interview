@@ -10,7 +10,7 @@ def rain(walls):
 
     if not walls:
         return 0
-    
+
     for wall in walls:
         if prevWall > 0 and wall == 0:
             spaces += 1
