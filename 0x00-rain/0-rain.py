@@ -4,20 +4,15 @@
 
 def rain(walls):
     """Calculates how much rainfall the walls will retain"""
-    totalRain = 0
-    spaces = 0
-    prevWall = 0
-
     if not walls:
         return 0
 
-    for wall in walls:
-        if prevWall > 0 and wall == 0:
-            spaces += 1
-        if wall > 0 and spaces >= 1 and prevWall:
-            totalRain += spaces * min(wall, prevWall)
-            spaces = 0
-        if wall > 0:
-            prevWall = wall
+    totalRain = 0
+
+    for i, h in enumerate(walls):
+        leftTallest = max(walls[:i + 1])
+        rightTallest = max(walls[i:])
+        shorter = min(leftTallest, rightTallest)
+        totalRain += max(shorter - h, 0)
 
     return totalRain
