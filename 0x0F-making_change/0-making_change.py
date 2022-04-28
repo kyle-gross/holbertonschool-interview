@@ -17,7 +17,7 @@ def makeChange(coins, total):
     """
     if total <= 0:
         return 0
-    
+
     # Sort coins with the largest denominations at the front of the list
     coins.sort(reverse=True)
     count = 0
@@ -29,7 +29,7 @@ def makeChange(coins, total):
         while total - coin >= 0 and coin <= total:
             total -= coin
             count += 1
-    
+
     # If total is not 0, then it's not possible
     if total != 0:
         return -1
