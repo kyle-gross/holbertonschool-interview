@@ -2,7 +2,8 @@
 """Finds the perimeter of an island"""
 
 def island_perimeter(grid):
-    """ Let's find the perimeter of an island! :D """
+    """Let's find the perimeter of an island!
+    """
 
     # Null check
     if grid is None:
