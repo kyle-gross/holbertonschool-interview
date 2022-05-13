@@ -2,6 +2,8 @@
 """
 Finds the perimeter
 of an island
+The island is surrounded by water
+Water is wet
 """
 
 def island_perimeter(grid):
