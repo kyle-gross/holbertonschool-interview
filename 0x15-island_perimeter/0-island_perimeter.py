@@ -1,11 +1,13 @@
 #!/usr/bin/python3
 """
-Finds the perimeter of an island
+Finds the perimeter
+of an island
 """
 
 def island_perimeter(grid):
     """
     Let's find the perimeter of an island!
+    The island is surrounded by water
     """
 
     # Null check
